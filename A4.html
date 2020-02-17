@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+* {
+	font-family: Times New Roman, arial;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+}
+h1, h2 {
+	margin: 1em 0 0 0;
+	text-align: center;
+}
+h2 {
+	margin: 0 0 1em 0;
+}
+#container {
+    margin: 0 auto;
+    width: 40%;
+}
+#accordion input {
+	display: none;
+}
+#accordion label {
+	background: #008B8B;
+	border-radius: .25em;
+	cursor: pointer;
+	display: block;
+	margin-bottom: .125em;
+	padding: .25em 1em;
+	z-index: 20;
+}
+#accordion label:hover {
+	background: #6495ED;
+}
+
+#accordion input:checked + label {
+	background: #00FFFF;
+	border-bottom-right-radius: 0;
+	border-bottom-left-radius: 0;
+	color: blue;
+	margin-bottom: 0;
+}
+#accordion article {
+	background: #E0FFFF;
+	height:0px;
+	overflow:hidden;
+	z-index:10;
+}
+#accordion article p {
+	padding: 1em;
+}
+#accordion input:checked article {
+}
+#accordion input:checked ~ article {
+	border-bottom-left-radius: .25em;
+	border-bottom-right-radius: .25em;
+	height: auto;
+	margin-bottom: .125em;
+}
+</style>
+<title>Page Title</title>
+</head>
+<body>
+	<div id="container">
+		<header>
+			<h1>Tomas Scherrer - (602) 885 - 4123</h1>
+			<h2> Objective: To get hired as a lead programmer for NASA</h2>
+		</header>
+		<section id="accordion">
+			<div>
+				<input type="checkbox" id="check-1" />
+				<label for="check-1">Education</label>
+				<article>
+					<p>
+            <table style="width:75%">
+  <tr>
+    <th>Education</th>
+    <th>Tenure</th>
+  </tr>
+  <tr>
+    <td>Arizona State University</td>
+    <td>2 semesters</td>
+  </tr>
+  <tr>
+    <td>Mountain Pointe High School</td>
+    <td>4 years</td>
+  </tr>
+</table>
+          </p>
+				</article>
+			</div>
+			<div>
+				<input type="checkbox" id="check-2" />
+				<label for="check-2">Experience</label>
+				<article>
+					<p>
+            <ol>
+  <li>1. Champs Sports Sales Representative</li>
+  <li>2. Life Guard at Arizona Grand</li>
+  <li>3. Verizon Wireless Sales Representative</li>
+</ol>
+          </p>
+				</article>
+			</div>
+			<div>
+				<input type="checkbox" id="check-3" />
+				<label for="check-3">References</label>
+				<article>
+					<p>
+            <ul>
+  <li>Dr. Crow (555) 123 - 4567</li>
+  <li>Jesus Christ (555) 888 - 4321</li>
+  <li>My Mom (555) 000 - 7777</li>
+</ul>
+
+          </p>
+				</article>
+			</div>
+		</section>
+  </div>
+</body>
